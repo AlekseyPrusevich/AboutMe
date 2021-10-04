@@ -125,6 +125,10 @@ a:hover {
 
 /* Header Nav */
 
+.header-nav {
+  position: relative;
+}
+
 .header-nav__list {
   display: flex;
   align-items: center;
@@ -133,6 +137,8 @@ a:hover {
   margin: 5px -22px 0 0;
   padding: 0;
   list-style: none;
+  z-index: 1;
+  background-color: #fff;
 }
 
 .header-nav__item {
@@ -222,6 +228,10 @@ a:hover {
   background: none;
   border: none;
   outline: 0;
+}
+
+.mob-menu-open__btn {
+  display: none;
 }
 
 .mob-menu-open__btn:hover .mob-menu-open__icon::before {
@@ -999,11 +1009,7 @@ button.btn--active:hover {
 
   .logo__name {
     font-size: 14px;
-  }
-
-  .header-nav {
-    display: none;
-  }
+  } 
 }
 
 
@@ -1163,10 +1169,6 @@ button.btn--active:hover {
     padding-right: 15px;
   }
 
-  .mob-menu-open {
-    display: none;
-  }
-
   .button {
     padding: 16px 31px;
   }
@@ -1196,10 +1198,6 @@ button.btn--active:hover {
 
   .comtainer {
     width: 1200px;
-  }
-
-  .mob-menu-open {
-    display: none;
   }
 
   .top-image {
@@ -1518,6 +1516,40 @@ button.btn--active:hover {
     flex-direction: column;
   }
 }
+
+@media (min-width: 0) and (max-width:1023px) {
+  
+  .mob-menu-open__btn {
+    display: flex;
+  }
+
+  .mob-menu-open:hover .header-nav__list {
+    display: flex;
+  }
+ 
+  .header-nav__list {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 12rem;
+    border: 1px solid #6a696b;
+    border-radius: 10px;
+    box-shadow: 4px 4px 11px 0px #6a696b;
+  }
+  
+  .header-nav__item {
+    margin: 0.2em 0;
+    padding: 0;
+  } 
+}
+
 
 
 
